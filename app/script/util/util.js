@@ -439,7 +439,7 @@ z.util.markup_links = function(message) {
 
 // Note: We are using "Underscore.js" to escape HTML in the original message
 z.util.render_message = function(message) {
-  message = marked(message.substr(0, z.config.MAXIMUM_MESSAGE_LENGTH));
+  message = marked(message);
 
   // Parse links with linkifyjs library, ignore code tags
   const options = {
